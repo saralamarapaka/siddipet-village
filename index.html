@@ -1,1 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SIDDIPET DISTRICT - SIDDIPET MANDAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
+}
+
+.info h3{
+color:#0b5394;
+margin-bottom:5px;
+}
+
+.info p{
+color:#666;
+}
+
+.open-btn{
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
+}
+
+footer{
+background:#0b5394;
+color:#fff;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="ou-logo.png" alt="OU Logo" class="logo">
+
+<div class="title">
+<h1>SIDDIPET DISTRICT</h1>
+<h2>SIDDIPET MANDAL</h2>
+</div>
+
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+<div class="container" id="places">
+<!-- 1 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>YELLAMMA TEMPLE</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12158,79.20389" target="_blank">Open Map</a>
+</div>
+
+<!-- 2 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌊</div>
+        <div class="info">
+            <h3>YELLAMMA CHERUVU</h3>
+            <p>Cheruvu</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.11253,79.19196" target="_blank">Open Map</a>
+</div>
+
+<!-- 3 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>HUSNABAD MUNICIPALITY</h3>
+            <p>Municipality</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13505,79.20821" target="_blank">Open Map</a>
+</div>
+
+<!-- 4 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>Sir CV RAMAN SCHOOL</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13587,79.20793" target="_blank">Open Map</a>
+</div>
+
+<!-- 5 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">📚</div>
+        <div class="info">
+            <h3>HUSNABAD LIBRARY</h3>
+            <p>Library</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13587,79.20652" target="_blank">Open Map</a>
+</div>
+
+<!-- 6 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⚖️</div>
+        <div class="info">
+            <h3>Civil Court Husnabad</h3>
+            <p>Court</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12689,79.21847" target="_blank">Open Map</a>
+</div>
+
+<!-- 7 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>Shivalayam Temple</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13038,79.20539" target="_blank">Open Map</a>
+</div>
+
+<!-- 8 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌳</div>
+        <div class="info">
+            <h3>Mini Park</h3>
+            <p>Park</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13183,79.20174" target="_blank">Open Map</a>
+</div>
+<!-- 9 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚌</div>
+        <div class="info">
+            <h3>Husnabad Bus Depot</h3>
+            <p>Bus Depot</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13123,79.20285" target="_blank">Open Map</a>
+</div>
+
+<!-- 10 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>KGBV</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.15098,79.21392" target="_blank">Open Map</a>
+</div>
+
+<!-- 11 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>Husnabad Building</h3>
+            <p>Building</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12893,79.20507" target="_blank">Open Map</a>
+</div>
+
+<!-- 12 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛪</div>
+        <div class="info">
+            <h3>Belivers Church</h3>
+            <p>Church</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12932,79.20204" target="_blank">Open Map</a>
+</div>
+
+<!-- 13 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>VL Reddy Function Hall</h3>
+            <p>Function Hall</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12813,79.20495" target="_blank">Open Map</a>
+</div>
+
+<!-- 14 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>MPDO Office Husnabad</h3>
+            <p>Government Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13700,79.20863" target="_blank">Open Map</a>
+</div>
+
+<!-- 15 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>ICDS</h3>
+            <p>Government Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.13701,79.20747" target="_blank">Open Map</a>
+</div>
+
+<!-- 16 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🍽️</div>
+        <div class="info">
+            <h3>Red Buket Biryani</h3>
+            <p>Restaurant</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12717,79.20866" target="_blank">Open Map</a>
+</div>
+<!-- 17 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">💊</div>
+        <div class="info">
+            <h3>Apollo Pharmacy Husnabad</h3>
+            <p>Pharmacy</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12739,79.20725" target="_blank">Open Map</a>
+</div>
+
+<!-- 18 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">📚</div>
+        <div class="info">
+            <h3>Library Competitive Exams</h3>
+            <p>Library</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12782,79.20388" target="_blank">Open Map</a>
+</div>
+
+<!-- 19 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛽</div>
+        <div class="info">
+            <h3>Indian Oil</h3>
+            <p>Petrol Pump</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12792,79.20219" target="_blank">Open Map</a>
+</div>
+
+<!-- 20 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚌</div>
+        <div class="info">
+            <h3>HUSNABAD BUS STAND</h3>
+            <p>Bus Stand</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.12706,79.20219" target="_blank">Open Map</a>
+</div>
+</div>
+
+<footer>
+    <p>© 2026 Siddipet District - Siddipet Mandal</p>
+    <p>Developed using OU & OTBI Project Template</p>
+</footer>
+
+<script>
+
+function searchPlaces() {
+
+    let input = document.getElementById("search").value.toLowerCase();
+
+    let places = document.getElementsByClassName("place");
+
+    for (let i = 0; i < places.length; i++) {
+
+        let text = places[i].innerText.toLowerCase();
+
+        if (text.indexOf(input) > -1) {
+            places[i].style.display = "flex";
+        } else {
+            places[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
